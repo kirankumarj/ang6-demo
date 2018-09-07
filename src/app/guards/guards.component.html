@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <ul>
+        <li
+        [routerLink]="['home']"
+        routerLinkActive="activeRouter"
+        [routerLinkActiveOptions]="{exact: true}">
+          <a>Home</a>
+        </li>
+        <li  [routerLink]="['admin']" routerLinkActive="activeRouter" >
+          <a >Admin</a>
+        </li>
+        <li  [routerLink]="['user']" routerLinkActive="activeRouter" >
+          <a >User</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+

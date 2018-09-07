@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12" appBetterHighlight>
+        <h4> Local Reference</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <input type="text" #userName placeholder="Enter User Name">
+      <button (click)="setName(userName)">Send</button>
+      <br>{{ userNameLocal }}
+    </div>
+  </div>
+
+  <hr>
+  <div class="row">
+      <div class="col-md-12">
+          <h4> View Child</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" #userSalary placeholder="Enter User Salary">
+        <button (click)="setSalary()">Send</button>
+        <br>{{ userSalaryLocal }}
+      </div>
+    </div>
+</div>

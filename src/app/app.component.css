@@ -1,0 +1,19 @@
+li{
+  list-style: none;
+  float: left;
+  border: 2px solid dodgerblue;
+  margin: 2px;
+  padding: 1px;
+}
+a{
+  text-decoration: none;
+}
+ul{
+  padding: 0;
+  margin: 0;
+}
+.active{
+  border:0px;
+  background: lightgray;
+  border-bottom: 2px dotted black;
+}

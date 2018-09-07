@@ -1,0 +1,9 @@
+<div class="container">
+<input type="text" [(ngModel)]=statusBtn>
+<p> {{ statusBtn}} </p>
+<hr>
+<button (click)="enbaleBtn()">Enable</button>
+<button (click)="disableBtn()">Disable</button>
+<button [disabled]="!isDisableBtn">Show action</button><p [innerHTML]="statusBtn"></p>
+<hr>
+</div>

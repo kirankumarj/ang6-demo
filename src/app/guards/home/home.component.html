@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-2">
+      <button class="btn btn-default" (click)="loginUser()">Login</button>
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-default" (click)="logoutUser()">Logout</button>
+    </div>
+    <div class="col-md-8">
+      <button class="btn btn-default" (click)="getStatus()">Get Status :: </button> User Is <span *ngIf="userStatus">login</span><span *ngIf="!userStatus">logout</span>
+    </div>
+  </div>
+</div>

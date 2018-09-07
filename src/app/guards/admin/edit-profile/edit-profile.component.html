@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      User Name :: {{ userName }}
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-12">
+        <input type="text" [(ngModel)]="newName">
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn btn-primary" (click)="editUser()">Update</button>
+        </div>
+      </div>
+</div>

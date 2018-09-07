@@ -1,0 +1,48 @@
+<div class="container" appHighlight>
+  <!-- here appHighlight is basic custome directive -->
+  <div class="row">
+    <div class="col-md-12">
+        <h2>Input-Output</h2>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+        <h4>Parent Component to child Communication</h4>
+    </div>
+    <div class="col-md-12">
+        Parent Component::<br>
+        <input type="text" placeholder="Enter User Name" [(ngModel)]="user.name">
+        <input type="number" placeholder="Enter User Age" [(ngModel)]="user.age">
+    </div>
+  </div>
+
+    <div class="row">
+      <div class="col-md-12">
+          <app-child [userDetails]="user"></app-child>
+      </div>
+    </div>
+
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Child Communication to Parent Component</h4>
+        </div>
+        <div class="col-md-12">
+            Parent Component::<br>
+        </div>
+        <div class="col-md-6">
+            Emp Name :: {{ emp.name }}
+        </div>
+        <div class="col-md-6">
+            Emp Salary :: {{ emp.salary }}
+        </div>
+      </div>
+
+        <div class="row">
+          <div class="col-md-12">
+              <app-child-output (onEmitedByChild)="setValueFromChildComponent($event)"></app-child-output>
+          </div>
+        </div>
+
+</div>

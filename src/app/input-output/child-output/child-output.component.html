@@ -1,0 +1,15 @@
+<br>Child Component:: <br>
+  <div class="row">
+    <div class="col-md-6">
+      Enter Name:: <input type="text" [(ngModel)]="name">
+    </div>
+      <div class="col-md-6">
+          Enter Salary:: <input type="number" [(ngModel)]="salary">
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <button (click)="sendToParent()">Send to Parent</button>
+        </div>
+      </div>
+

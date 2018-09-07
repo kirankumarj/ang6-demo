@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+        <h1>Routing</h1>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-12">
+          <button class="btn btn-primary" (click)="onNavigate()">Reload..!</button>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="col-md-12">
+            <button class="btn btn-primary" (click)="navigateHome()">Navigate To Home</button>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-3">
+              <ul style="list-style: none;">
+                <li>
+                  Path param:: <a [routerLink]="['sub-1', 12, 'kiran']" routerLinkActive="" >SUB-1</a>
+                </li>
+                <li>
+                  Query Param:: <a [routerLink]="['sub-2']" [queryParams]="{id: 23, name : 'kiran'}" routerLinkActive="router-link-active" >SUB-2</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-9">
+              <router-outlet></router-outlet>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+

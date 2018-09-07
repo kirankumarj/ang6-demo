@@ -1,0 +1,32 @@
+<!-- <input type="number" [(ngModel)]="selectedColor" (input)="checkNumber()"> -->
+<div class="container" appHighlight>
+<p>*ngIf</p>
+<hr>
+<button (click)="blueColor()">BLUE</button>
+<button (click)="redColor()">RED</button>
+<div *ngIf="isSelectedColor; else otherColorTemplate">
+ <p> Selected Color is {{ selectedColor }}</p>
+</div>
+<ng-template #otherColorTemplate>
+  <p>Selected Color is {{ selectedColor }}</p>
+</ng-template>
+<hr>
+
+<p> [ngStyle]</p>
+<hr>
+<button (click)="changeDivColor('blue')">BLUE</button>
+<button (click)="changeDivColor('red')">RED</button>
+<button (click)="changeDivColor('green')">GREEN</button>
+<div [ngStyle]="{backgroundColor: getColor()}"  style="width: 200px; height: 20px;"></div>
+<hr>
+
+
+<p>*ngFor</p>
+<hr>
+<h3>List of users </h3>
+<input type="tel" [(ngModel)]="userName">
+<button (click)="addUser()">ADD</button>
+<div *ngFor="let name of names; let i = index;">
+ <p> {{ i+1 }}::{{ name }}</p>
+</div>
+</div>
