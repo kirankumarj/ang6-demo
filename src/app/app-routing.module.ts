@@ -18,6 +18,9 @@ import { GuardsServices } from './guards.services';
 import { EditProfileComponent } from './guards/admin/edit-profile/edit-profile.component';
 import { UserProfileComponent } from './guards/admin/user-profile/user-profile.component';
 import { CanDeactiveGuard } from './guards/admin/edit-profile/edit-deactiveted-guards.service';
+import { FormsComponent } from './forms/forms.component';
+import { TemplateDriveComponent } from './forms/template-drive/template-drive.component';
+import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
 const routes: Routes = [
   {path: 'data-binding', component: DatabindingComponent},
   {path: '', component: DatabindingComponent},
@@ -44,6 +47,11 @@ const routes: Routes = [
         {path: 'edit-profile', component: EditProfileComponent, canDeactivate: [CanDeactiveGuard]},
       ]},
     {path: 'user', component: UserComponent},
+  ]},
+  {path: 'forms', component: FormsComponent, children: [
+    {path: '', component: TemplateDriveComponent},
+    {path: 'template-driven', component: TemplateDriveComponent},
+    {path: 'reactive-forms', component: ReactiveFormComponent},
   ]},
   {path: '**', redirectTo: 'not-found' }
 ];

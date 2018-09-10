@@ -28,6 +28,9 @@ import { ServiceService } from './service.service';
 import { EditProfileComponent } from './guards/admin/edit-profile/edit-profile.component';
 import { UserProfileComponent } from './guards/admin/user-profile/user-profile.component';
 import { CanDeactiveGuard } from './guards/admin/edit-profile/edit-deactiveted-guards.service';
+import { FormsComponent } from './forms/forms.component';
+import { TemplateDriveComponent } from './forms/template-drive/template-drive.component';
+import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,10 @@ import { CanDeactiveGuard } from './guards/admin/edit-profile/edit-deactiveted-g
     AdminComponent,
     UserComponent,
     EditProfileComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    FormsComponent,
+    TemplateDriveComponent,
+    ReactiveFormComponent
   ],
   imports: [
     FormsModule,
