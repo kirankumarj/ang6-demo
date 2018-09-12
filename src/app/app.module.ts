@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
-import { FormsModule } from '@angular/forms';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { InputOutputComponent } from './input-output/input-output.component';
@@ -31,6 +31,8 @@ import { CanDeactiveGuard } from './guards/admin/edit-profile/edit-deactiveted-g
 import { FormsComponent } from './forms/forms.component';
 import { TemplateDriveComponent } from './forms/template-drive/template-drive.component';
 import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
+
+
 
 @NgModule({
   declarations: [
@@ -63,6 +65,7 @@ import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.compo
   imports: [
     FormsModule,
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [ServiceService, GuardsServices, CanDeactiveGuard],

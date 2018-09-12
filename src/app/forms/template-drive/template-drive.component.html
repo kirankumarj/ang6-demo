@@ -4,19 +4,30 @@
        <h4> Template Driven forms</h4>
     </div>
   </div>
-  <form (ngSubmit)="onSubmitForm(f)" #f="ngForm">
+  <!-- <form (ngSubmit)="onSubmitForm()" #f="ngForm"> -->
+    <form (ngSubmit)="onSubmitForm(f)" #f="ngForm">
     <div class="row">
-      <div class="col-md-12">
-        Enter Name:: <input type="text" name="name" placeholder="Enter name" ngModel>
+      <div class="col-md-3">
+        Enter Name::
       </div>
+      <div class="col-md-9">
+        <input
+        type="text"
+        name="name"
+        placeholder="Enter name"
+        ngModel
+        required
+        #name="ngModel">
+        <span *ngIf="!name.valid && name.touched"> Please Enter the name</span>
+        </div>
       <div class="col-md-12">
         <div class="row">
           <div class="col-md-3">
               Select Gender::
           </div>
           <div class=" col-md-9">
-              Male:: <input type="radio" name="gender" value="Male" ngModel> <br>
-                        Female:: <input type="radio" name="gender" value="Female" ngModel>
+              Male:: <input type="radio" name="gender" value="Male" ngModel>
+              Female:: <input type="radio" name="gender" value="Female" ngModel>
             </div>
           </div>
       </div>
@@ -26,17 +37,59 @@
                   Select Option::
               </div>
               <div class=" col-md-9">
-                <select name="role" ngModel>
+                <select name="role" [ngModel]="defalutRole" required>
                   <option value="sse">SSE</option>
                   <option value="se">SE</option>
                   <option value="qa">QA</option>
+                  <option value="test">TEST</option>
                 </select>
                 </div>
               </div>
       </div>
-      <div class="col-md-12">
-        <button value="submit" class="btn btn-primary">SUBMIT</button>
+      <div class="col-md-3">
+          Email::
+        </div>
+        <div class="col-md-9">
+            <input
+            type="email"
+            name="email"
+            ngModel
+            required
+            email
+            #email="ngModel">
+            <span *ngIf="!email.valid && email.touched">Invalid Email, Please Enter valid email. Ex:: name@mail.com</span>
+          </div>
+      <div class="col-md-2">
       </div>
+      <div class="col-md-3">
+          <button
+          value="submit"
+          class="btn btn-primary"
+          [disabled]="!f.valid"
+          >SUBMIT</button>
+        </div>
     </div>
   </form>
+<br>
+<hr>
+<br>
+  <div class="row">
+      <div class="col-md-12">
+        <!-- Mapping Object ::{{ response }} -->
+      </div>
+  </div>
+
+  <br>
+<hr>
+<br>
+  <div class="row">
+      <div class="col-md-12">
+        Note:: Using @ViewChild also access the form template variable <br>
+
+        @ViewChild('f') formValues;
+      </div>
+  </div>
 </div>
+
+
+

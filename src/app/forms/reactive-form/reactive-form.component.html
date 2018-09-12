@@ -1,3 +1,72 @@
-<p>
-  reactive-form works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Reactive Forms</h3>
+    </div>
+  </div>
+  <hr>
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+
+          <div class="col-md-3">
+              Enter Name::
+            </div>
+            <div class="col-md-9" formGroupName="userData">
+                <input type="text" formControlName="userName">
+                <span *ngIf="!signupForm.get('userData.userName').valid && signupForm.get('userData.userName').touched">Please enter name</span>
+            </div>
+            <div class="col-md-3">
+              Enter Email::
+            </div>
+            <div class="col-md-9" formGroupName="userData">
+                <input type="email" formControlName="email">
+                <span *ngIf="!signupForm.get('userData.email').valid && signupForm.get('userData.email').touched">Please enter valid email</span>
+            </div>
+
+            <div class="col-md-3">
+                Enter Login Name::
+              </div>
+              <div class="col-md-9" formGroupName="userData">
+                  <input type="email" formControlName="loginName">
+                  <span *ngIf="!signupForm.get('userData.loginName').valid && signupForm.get('userData.loginName').touched">
+                    <span *ngIf="signupForm.get('userData.loginName').errors['inValidName']">Login Name Invalid..!</span>
+                    <span *ngIf="signupForm.get('userData.loginName').errors['required']">Login Name required..!</span>
+                </span>
+              </div>
+
+      <div class="col-md-3">
+          Select Gender
+      </div>
+      <div class="col-md-9">
+          <div class="row" *ngFor="let gender of genders">
+            <div class="col-md-3">
+              <input type="radio"
+              name="gender"
+              [value]="gender"
+              formControlName="gender"> {{ gender }}
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" formArrayName="hobbies">
+          <button type="button" (click)="addHobbies()">ADD HOBBY</button>
+            <div *ngFor="let hobby of signupForm.get('hobbies').controls; let i = index">
+              <input type="text" [formControlName]="i">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-3">
+          <button type="submit">Submit</button>
+        </div>
+        <div class="col-md-4">
+
+          </div>
+    </div>
+  </form>
+</div>

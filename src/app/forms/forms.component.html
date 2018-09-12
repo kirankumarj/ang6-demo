@@ -1,9 +1,17 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-5" style="background: lightgray;" [routerLink]="['template-driven']" routerLinkActive="appliedButtonStyle" >
+    <div
+    class="col-md-5"
+    style="background: lightgray;"
+    [routerLink]="['template-driven']"
+    routerLinkActive="appliedButtonStyle"
+    [routerLinkActiveOptions]="{exact: true}" >
         Template-Driven
     </div>
-    <div class="col-md-5" style="background: lightgray; margin-left: 1px;" [routerLink]="['reactive-forms']" routerLinkActive="appliedButtonStyle" >
+    <div class="col-md-5"
+    style="background: lightgray; margin-left: 1px;"
+    [routerLink]="['reactive-forms']"
+    routerLinkActive="appliedButtonStyle" >
       Reactive-form
     </div>
   </div>

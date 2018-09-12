@@ -15,5 +15,5 @@ ul{
 .active{
   border:0px;
   background: lightgray;
-  border-bottom: 2px dotted black;
+  border-bottom: 2px solid lightslategrey;
 }

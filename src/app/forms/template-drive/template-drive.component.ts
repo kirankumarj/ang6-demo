@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-template-drive',
@@ -6,14 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./template-drive.component.css']
 })
 export class TemplateDriveComponent implements OnInit {
-
+  // @ViewChild('f') formValues;
+  response: any;
+  defalutRole = 'sse';
   constructor() { }
 
   ngOnInit() {
   }
 
+  // onSubmitForm() {
+  //   console.log(this.formValues);
+  // }
   onSubmitForm(form) {
-    console.log(form.value);
+    this.response = form.value.name;
   }
 
 }
