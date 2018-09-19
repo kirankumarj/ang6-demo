@@ -70,3 +70,24 @@
     </div>
   </form>
 </div>
+
+<div class="container">
+  <div class="row" [formGroup]="testForm">
+    <div class="col-md-12">
+      <h4>
+        Submitted Form Data...!
+      </h4>
+      <div class="col-md-12">
+          <input type="text" formControlName="gender">
+      </div>
+    </div>
+      <div class="row" formGroupName="userData">
+          <div class="col-md-12">
+              <input type="text" formControlName="userName">
+          </div>
+          <div class="col-md-12">
+              <input type="text" formControlName="loginName">
+          </div>
+      </div>
+  </div>
+</div>

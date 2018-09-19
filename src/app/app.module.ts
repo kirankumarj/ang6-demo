@@ -31,6 +31,9 @@ import { CanDeactiveGuard } from './guards/admin/edit-profile/edit-deactiveted-g
 import { FormsComponent } from './forms/forms.component';
 import { TemplateDriveComponent } from './forms/template-drive/template-drive.component';
 import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { AddressFilterPipe } from './address-filter.pipe';
+import { UsersFilterPipe } from './users-filter.pipe';
 
 
 
@@ -60,7 +63,10 @@ import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.compo
     UserProfileComponent,
     FormsComponent,
     TemplateDriveComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    PipesComponent,
+    AddressFilterPipe,
+    UsersFilterPipe
   ],
   imports: [
     FormsModule,

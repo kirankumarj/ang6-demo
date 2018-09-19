@@ -21,6 +21,7 @@ import { CanDeactiveGuard } from './guards/admin/edit-profile/edit-deactiveted-g
 import { FormsComponent } from './forms/forms.component';
 import { TemplateDriveComponent } from './forms/template-drive/template-drive.component';
 import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
+import { PipesComponent } from './pipes/pipes.component';
 const routes: Routes = [
   {path: 'data-binding', component: DatabindingComponent},
   {path: '', component: DatabindingComponent},
@@ -34,6 +35,7 @@ const routes: Routes = [
     {path: 'sub-2', component: Sub2Component},
   ]},
   {path: 'not-found', component: NotFoundComponent},
+  {path: 'pipes', component: PipesComponent},
   {path: 'guards', component: GuardsComponent, children: [
     {path: '', component: HomeComponent},
     {path: 'home', component: HomeComponent},

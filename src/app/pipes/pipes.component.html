@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>Pipes Examples
+      </h3>
+    </div>
+  </div>
+  <form (ngSubmit)="onSubmitForm(f)" #f="ngForm">
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" name="name" ngModel placeholder="Enter name">
+        <input type="date" name="dob" ngModel placeholder="Enter name">
+        <input type="text" name="city" ngModel placeholder="Enter City">
+        <input type="address" name="address" ngModel placeholder="Enter address">
+      </div>
+      <div class="col-md-12">
+        <input type="submit" value="submit">
+      </div>
+    </div>
+  </form>
+
+  <br>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+      <input type="text" [(ngModel)]="searchCity" placeholder="Search City">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12 userlist" *ngFor="let user of userList | usersFilter:searchCity:'city'">
+      {{user.name | uppercase}} -- {{user.dob| date}} -- {{user.city}} -- {{user.address | addressFilter:10}}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+.userlist {
+  border: 2px inset gray;
+  border-collapse: collapse;
+  margin: 2px;
+  padding: 5px;
+}
